@@ -24,5 +24,4 @@ async def forward(event):
         pass
 if __name__=='__main__':
     connect()
-    with bot:
-        bot.run_until_disconnected()
+    bot.run_until_disconnected()
