@@ -23,4 +23,5 @@ async def forward(event):
     except:
         pass
 if __name__=='__main__':
-    bot.run_until_disconnected()
+    with bot:
+        bot.run_until_disconnected()
