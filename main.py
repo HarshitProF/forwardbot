@@ -22,4 +22,5 @@ async def forward(event):
             await bot.forward_messages("Deals_01_bot",event.original_update.message)
     except:
         pass
-run()
+if __name__=='__main__':
+    bot.run_until_disconnected()
