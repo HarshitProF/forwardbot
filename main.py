@@ -22,5 +22,4 @@ async def forward(event):
             await bot.forward_messages("Deals_01_bot",event.original_update.message)
     except:
         pass
-if __name__=='__main__':
-    run()
+run()
