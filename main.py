@@ -3,13 +3,12 @@ import asyncio
 num=918318986538
 bot=Client(f'sessions/{num}',api_id='26094266',api_hash='4e1b477203976969b56ef26477afe775')
 channels=[1496705628,1357275556,1433606813,1514109014,1687952246,1450755585,1348625748]
-def connect():
-    if not bot.is_user_authorized():
-        try:
-            bot.start(phone=num)
-        except Exception as e:
-            print(e)
-    bot.connect()
+if not bot.is_user_authorized():
+    try:
+        bot.start(phone=num) 
+    except Exception as e:
+        print(e)
+bot.connect() 
 def run():
     connect()
     with bot :
@@ -23,5 +22,4 @@ async def forward(event):
     except:
         pass
 if __name__=='__main__':
-    connect()
     bot.run_until_disconnected()
