@@ -7,13 +7,13 @@ client=TelegramClient('Harshit', api, hash)
 channels=[1496705628,1357275556,1433606813,1514109014,1687952246,1450755585,1348625748]
 def number () :
 	return phone
-def connect() :
-	if not client.is_user_authorized() :
-		try:
-			client.start(phone=number())
-		except Exception as e :
-			print(e) 
-	client.connect() 
+async def connect() :
+    await client.connect() 
+    if not await client.is_user_authorized() :
+        try:
+            await client.start(phone=number())
+	except Exception as e :
+	    print(e) 
 #connect () 
 
 def check(events) :
@@ -34,7 +34,7 @@ async def messa(event) :
 		pass
 	
 if __name__=="__main__" :
-	connect() 
+	asyncio.connect() 
 	#client.connect() 
 	with client:
 		client.run_until_disconnected() 
