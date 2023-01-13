@@ -1,5 +1,4 @@
 from telethon import TelegramClient , events
-from flask import Flask
 import asyncio
 api=26094266
 phone=918318986538
