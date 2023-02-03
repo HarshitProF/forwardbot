@@ -3,7 +3,7 @@ import asyncio
 api=26094266
 phone=918318986538
 hash="4e1b477203976969b56ef26477afe775"
-client=TelegramClient('Harshit', api, hash)
+client=TelegramClient(f'sessions/{phone}', api, hash)
 channels=[1496705628,1357275556,1433606813,1514109014,1687952246,1450755585,1348625748]
 def number () :
 	return phone
