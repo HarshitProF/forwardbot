@@ -1,1 +1,1 @@
-worker : uwsgi uwsgi.ini
+worker : python bot.py
