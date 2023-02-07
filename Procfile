@@ -1,1 +1,1 @@
-worker : gunicorn bot
+worker : gunicorn bot:main
