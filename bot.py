@@ -9,15 +9,15 @@ client=TelegramClient(StringSession(string) , api, hash)
 channels=[1496705628,1357275556,1433606813,1514109014,1687952246,1450755585,1348625748]
 def number () :
 	return phone
-async def connect() :
-	await client.connect() 
+def connect() :
+	client.connect() 
 	if not await client.is_user_authorized() :
 		try:
-			await client.start(phone=number())
+			client.start(phone=number())
 		except Exception as e :
 			print(e) 
-	async with client:
-		await client.run_until_disconnected() 
+	with client:
+		client.run_until_disconnected() 
 #connect () 
 
 def check(events) :
@@ -29,15 +29,12 @@ def check(events) :
 		return False"""
 	
 @client.on(events.NewMessage(incoming=True  )) 
-async def messa(event) :
+def messa(event) :
 	try:
 		if event.original_update.message.peer_id.channel_id in channels:
 			print(event.original_update.message) 
-			await client.forward_messages("Deals_01_bot",  event.original_update.message) 
+			client.forward_messages("Deals_01_bot",  event.original_update.message) 
 	except:
 		pass
 	
-def main() :
-	asyncio.run(connect()) 
-main() 
-
+connect() 
