@@ -37,4 +37,6 @@ def messa(event) :
 	except:
 		pass
 	
-connect() 
+#connect() 
+if __name__=="__main__":
+    connect() 
