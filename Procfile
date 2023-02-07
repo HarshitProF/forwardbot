@@ -1,1 +1,1 @@
-worker : gunicorn bot:connect
+worker : gunicorn bot
