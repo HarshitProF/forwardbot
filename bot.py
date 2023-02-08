@@ -15,9 +15,7 @@ def connect() :
 		try:
 			client.start(phone=number())
 		except Exception as e :
-			print(e) 
-	with client:
-		client.run_until_disconnected() 
+			print(e)
 @client.on(events.NewMessage(incoming=True  )) 
 async def messa(event) :
 	try:
@@ -27,6 +25,4 @@ async def messa(event) :
 	except:
 		pass
 	
-#connect() 
-if __name__=="__main__":
-    connect() 
+connect()
