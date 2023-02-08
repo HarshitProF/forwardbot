@@ -1,2 +1,2 @@
-from main import connect
+from bot import connect
 connect() 
