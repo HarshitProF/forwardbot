@@ -11,7 +11,7 @@ def number () :
 	return phone
 def connect() :
 	client.connect() 
-	if not await client.is_user_authorized() :
+	if not client.is_user_authorized() :
 		try:
 			client.start(phone=number())
 		except Exception as e :
