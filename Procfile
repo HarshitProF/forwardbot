@@ -1,1 +1,1 @@
-worker : gunicorn app:connect
+web : gunicorn app:connect
