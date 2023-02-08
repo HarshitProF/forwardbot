@@ -19,11 +19,11 @@ def connect() :
 	with client:
 		client.run_until_disconnected() 
 @client.on(events.NewMessage(incoming=True  )) 
-def messa(event) :
+async def messa(event) :
 	try:
 		if event.original_update.message.peer_id.channel_id in channels:
 			print(event.original_update.message) 
-			client.forward_messages("Deals_01_bot",  event.original_update.message) 
+			await client.forward_messages("Deals_01_bot",  event.original_update.message) 
 	except:
 		pass
 	
