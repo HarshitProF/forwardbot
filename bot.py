@@ -18,16 +18,6 @@ def connect() :
 			print(e) 
 	with client:
 		client.run_until_disconnected() 
-#connect () 
-
-def check(events) :
-	"""
-			return True
-		else :
-			return False
-	except:
-		return False"""
-	
 @client.on(events.NewMessage(incoming=True  )) 
 def messa(event) :
 	try:
